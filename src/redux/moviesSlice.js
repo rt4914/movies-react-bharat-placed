@@ -1,7 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  heroData: []
+  heroData: [],
+  imageBaseUrl: '',
 }
 
 export const moviesSlice = createSlice({
@@ -10,10 +11,13 @@ export const moviesSlice = createSlice({
   reducers: {
     setHeroData: (state, action) =>{
       state.heroData = action.payload
+    },
+    setImageBaseUrl: (state, action) =>{
+      state.imageBaseUrl = action.payload
     }
   }
 })
 
-export const { setHeroData } = moviesSlice.actions
+export const { setHeroData, setImageBaseUrl } = moviesSlice.actions
 
 export default moviesSlice.reducer

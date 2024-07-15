@@ -1,13 +1,9 @@
-import { useSelector } from "react-redux"
+import Hero from "../sections/Hero"
 
 const Home = () => {
-  const heroData = useSelector((state) => state.movies.heroData)
-
-  console.log("home: ", heroData)
-
   return (
     <div>
-      Home
+      <Hero />
     </div>
   )
 }
