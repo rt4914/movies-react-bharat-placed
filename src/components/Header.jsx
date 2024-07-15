@@ -22,12 +22,12 @@ const Header = () => {
   }
 
   return (
-    <header className='flex items-center justify-between bg-gray-900 fixed w-full h-16 lg:px-12 md:px-8 px-4'>
+    <header className='z-10 opacity-80 flex items-center justify-between bg-black fixed w-full h-16 lg:px-12 md:px-8 px-4'>
       <Link to="/">
         <h2 className="text-white text-3xl font-bold">MOVIES DB</h2>
       </Link>
       <form className='rounded border border-white p-1 flex gap-2 items-center' onSubmit={handleSubmit}>
-        <input type="text" placeholder='Search movie' onChange={handleSearchInput} className='outline-none bg-gray-900 text-white px-2 py-1' />
+        <input type="text" placeholder='Search movie' onChange={handleSearchInput} className='outline-none bg-black text-white px-2 py-1' />
         <button type="submit">
           <CiSearch className='text-white w-6 h-6 hover:cursor-pointer hover:stroke-1' />
         </button>
