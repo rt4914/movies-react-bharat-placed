@@ -15,7 +15,6 @@ const options = (url) => {
       Authorization: `Bearer ${import.meta.env.VITE_MOVIES_API}`
     }
   }
-
 }
 
 function App() {
@@ -25,7 +24,6 @@ function App() {
     axios
       .request(options('https://api.themoviedb.org/3/trending/movie/day'))
       .then(function (response) {
-        console.log(response.data);
         dispatch(setHeroData(response.data.results))
       })
       .catch(function (error) {
@@ -37,7 +35,6 @@ function App() {
     axios
       .request(options('https://api.themoviedb.org/3/configuration'))
       .then(function (response) {
-        console.log("imageurl: ", response.data.images.base_url + "original");
         dispatch(setImageBaseUrl(response.data.images.base_url + "original"))
       })
       .catch(function (error) {
@@ -50,9 +47,8 @@ function App() {
     getImageBaseUrl();
   } ,[])
 
-
   return (
-    <div>
+    <div className="pb-24">
       <Header />
       <div>
         <Outlet />

@@ -4,7 +4,6 @@ import {
 import App from "../App";
 import Home from "../pages/Home"
 import Search from "../pages/Search"
-import Explore from "../pages/Explore"
 import MovieDetail from "../pages/MovieDetail"
 
 const router = createBrowserRouter([
@@ -21,11 +20,7 @@ const router = createBrowserRouter([
         element: <Search />
       },
       {
-        path: ":explore",
-        element: <Explore />
-      },
-      {
-        path: "/:explore/:id",
+        path: "/movie/:id",
         element: <MovieDetail />
       },
     ]

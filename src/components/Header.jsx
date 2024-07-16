@@ -2,16 +2,24 @@ import { Link, useNavigate } from 'react-router-dom'
 import { CiSearch } from "react-icons/ci";
 
 import { useEffect, useState } from 'react';
+import useDebounce from '../hooks/useDebounce';
 
 const Header = () => {
   const navigate = useNavigate()
   const [search, setSearch] = useState('')
 
+  const [debounceSearch, setDebounceSearch] = useState("");
+  const debounceValue = useDebounce(search, 500);
+
   useEffect(() => {
-    if (search) {
-      navigate(`/search?q=${search}`)
+    setDebounceSearch(search);
+  }, [debounceValue]);
+
+  useEffect(() => {
+    if (debounceSearch) {
+      navigate(`/search?q=${debounceSearch}`)
     } 
-  }, [search])
+  }, [debounceSearch])
 
   const handleSearchInput = (e) => {
     setSearch(e.target.value)

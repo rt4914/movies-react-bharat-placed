@@ -2,6 +2,7 @@ import { useSelector } from "react-redux"
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 import { FaStar } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   const heroData = useSelector((state) => state.movies.heroData)
@@ -21,6 +22,9 @@ const Hero = () => {
                   <FaStar />
                   { Number(movie.vote_average).toFixed(1)}/10
                 </span>
+                <Link to={`movie/${movie.id}`} className="mt-4 bg-black rounded px-3 py-2 border border-white hover:bg-gray-800">
+                  Play Now
+                </Link>
               </div>
             </div>
           )
