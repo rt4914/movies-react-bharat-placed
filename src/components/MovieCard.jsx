@@ -9,7 +9,7 @@ const MovieCard = ({movie}) => {
     <Link to={`movie/${movie.id}`}>
       <div className="w-[320px] rounded shadow-md relative">
         <img className="w-full h-full rounded" src={imageBaseUrl + movie.backdrop_path} />
-        <div className="z-10 absolute bg-gradient-to-b from-transparent to-black bottom-0 p-2 flex flex-col items-start">
+        <div className="w-full z-10 absolute bg-gradient-to-b from-transparent to-black bottom-0 p-2 flex flex-col items-start">
           <h2 className="font-medium text-white text-lg">{movie.title}</h2>
           <span className="flex items-center gap-2 mt-0 text-sm">
             <FaStar className='size-4'/>

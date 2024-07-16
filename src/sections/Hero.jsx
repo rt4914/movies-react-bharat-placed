@@ -15,7 +15,7 @@ const Hero = () => {
           return(
             <div key={movie.id}>
               <img className="w-full md:h-screen" src={imageBaseUrl + movie.backdrop_path} />
-              <div className="z-10 absolute bg-gradient-to-b from-transparent to-black bottom-0 pb-12 md:pb-20 lg:px-12 md:px-8 px-4 flex flex-col items-start">
+              <div className="w-full z-10 absolute bg-gradient-to-b from-transparent to-black bottom-0 pb-12 md:pb-20 lg:px-12 md:px-8 px-4 flex flex-col items-start">
                 <h2 className="text-xl md:text-5xl font-medium text-white text-start">{movie.title}</h2>
                 <p className="hidden md:flex mt-8 text-base text-gray-100 text-start lg:me-96">{movie.overview}</p>
                 <span className="flex items-center gap-2 mt-4">

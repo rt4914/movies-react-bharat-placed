@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import MovieCard from "../components/MovieCard";
 import { useLocation } from "react-router-dom";
-import useDebounce from "../hooks/useDebounce";
 
 const options = (url, searchText) => {
   return {
